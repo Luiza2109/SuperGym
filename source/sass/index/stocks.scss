@@ -1,0 +1,257 @@
+.stocks {
+  padding-top: 118px;
+  padding-bottom: 60px;
+}
+
+.stocks h2 {
+  margin: 0;
+  margin-bottom: 52px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $blue-zodiac;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stocks__wrapper {
+  display: flex;
+}
+
+.stocks__btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $biscay;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    transform: scale(0);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.stocks__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 44px 0 45px 44px;
+  width: 560px;
+  min-height: 462px;
+  margin-right: 3.4%;
+  color: $bg-white;
+  background-color: $red-ribbona;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #4573e0;
+    background-image: url("../img/stocks-desctop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+}
+
+.stocks__main p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 11px;
+  width: 150px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stocks__main span {
+  font-size: 70px;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.stocks__main h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  width: 200px;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.stocks__main .stocks__btn {
+  margin-top: auto;
+  color: $bg-white;
+}
+
+.stocks__list {
+  @include same-list;
+  display: flex;
+  flex-direction: column;
+  width: 48.2%;
+}
+
+.stocks__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 211px;
+  padding: 26px 3% 29px 5.1%;
+  border: 7px solid transparent;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+}
+
+.stocks__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.stocks__item h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.stocks__item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.stocks__item .stocks__btn {
+  margin-top: auto;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media (max-width: $tablet-width) {
+  .stocks {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .stocks__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stocks h2 {
+    margin-bottom: 41px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .stocks__main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 58.8%;
+      background-image: url("../img/stocks-lap@1x.jpg");
+    }
+  }
+
+  .stocks__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .stocks__item {
+    width: 47.8%;
+    padding: 26px 6% 29px 4.1%;
+  }
+
+  .stocks__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .stocks {
+    padding-top: 69px;
+    padding-bottom: 40px;
+  }
+
+  .stocks__wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .stocks h2 {
+    margin-bottom: 43px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .stocks__main {
+    min-height: 598px;
+    margin-bottom: 30px;
+    padding: 44px 3% 345px 3%;
+    text-align: center;
+
+    &::before {
+      width: 100%;
+      height: 299px;
+      background-image: url("../img/stocks-mobile@1x.jpg");
+    }
+  }
+
+  .stocks__main p,
+  .stocks__main h3,
+  .stocks__main a {
+    margin: 0 auto;
+  }
+
+  .stocks__main h3 {
+    margin-bottom: 10px;
+  }
+
+  .stocks__main p {
+    margin-bottom: 7px;
+  }
+
+  .stocks__list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stocks__item {
+    align-items: center;
+    width: auto;
+    padding: 37px 10% 40px 10%;
+  }
+
+  .stocks__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

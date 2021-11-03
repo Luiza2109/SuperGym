@@ -1,0 +1,50 @@
+.page-main__subscription {
+  margin-bottom: 119px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 101px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.page-main__promo {
+  margin-bottom: 118px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 99px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.page-main__trainers {
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.page-main__reviews {
+  margin-top: 58px;
+  margin-bottom: 121px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 39px;
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 29px;
+    margin-bottom: 70px;
+  }
+}

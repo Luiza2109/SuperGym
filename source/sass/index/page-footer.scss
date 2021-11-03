@@ -1,0 +1,33 @@
+.page-footer {
+  padding-top: 45px;
+  padding-bottom: 38px;
+  background-color: $black-pearl;
+}
+
+.page-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer {
+    padding-top: 61px;
+    padding-bottom: 38px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-footer {
+    padding-top: 48px;
+    padding-bottom: 38px;
+  }
+
+  .page-footer__container {
+    display: block;
+  }
+
+  .page-footer__logo {
+    display: inline-block;
+  }
+}

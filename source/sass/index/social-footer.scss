@@ -1,0 +1,32 @@
+.social-footer {
+  @include same-list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 135px;
+}
+
+.social-footer__item {
+  margin-left: 25px;
+}
+
+.social-footer__item svg {
+  transition: all 0.3s ease;
+}
+
+.social-footer__item a:hover svg {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.social-footer__item a:active svg {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: $tablet-width) {
+  .social-footer {
+    width: 120px;
+  }
+
+  .social-footer__item {
+    margin-left: 20px;
+  }
+}

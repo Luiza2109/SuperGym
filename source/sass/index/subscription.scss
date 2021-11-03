@@ -1,0 +1,305 @@
+.subscription {
+  position: relative;
+  z-index: 1;
+  background-color: $white-lilac;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -215px;
+    bottom: -145px;
+    width: 500px;
+    height: 490px;
+    background-image: url("../img/barbell@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media(min-resolution: 1.5dppx),
+          (min-resolution: 144dpi) {
+      background-image: url("../img/barbell@2x.png");
+    }
+  }
+}
+
+.subscription__container {
+  padding-top: 119px;
+  padding-bottom: 101px;
+}
+
+.subscription h2 {
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $blue-zodiac;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subscription__controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 342px;
+  margin-bottom: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 41px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.subscription__controls label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 19px;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba($blue-zodiac, 0.5%);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 41px;
+    width: 100%;
+    height: 2px;
+    background-color: #d10a42;
+    transform: scale(0);
+    transition: all 0.5s ease;
+  }
+}
+
+.subscription__list {
+  @include same-list;
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.subscription__item {
+  width: 31%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  margin-right: 3.5%;
+  text-align: center;
+  background-color: $bg-white;
+  border: 7px solid transparent;
+  border-image-slice: 1;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.subscription__item--active,
+.subscription__item:hover {
+  border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+}
+
+.subscription__item h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+  color: $blue-zodiac;
+}
+
+.subscription__item p {
+  margin: 0;
+  margin-bottom: 65px;
+  font-size: 16px;
+  line-height: 150%;
+  color: $blue-bayoux;
+}
+
+.subscription__item b {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 34px;
+  font-size: 60px;
+  line-height: 150%;
+  font-weight: 700;
+  color: $torea-bay;
+
+  &::before {
+    content: attr(data-value);
+    position: absolute;
+    z-index: -1;
+    top: -23px;
+    left: 50%;
+    width: 203px;
+    height: 69px;
+    transform: translateX(-50%);
+    font-size: 100px;
+    color: rgba(232, 232, 232, 0.47);
+  }
+}
+
+.subscription__btn {
+  padding: 26px 46px;
+  border: none;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $blue-zodiac;
+  box-shadow: inset 0px 0px 0px 2px $blue-zodiac;
+
+}
+
+.subscription__item:hover .subscription__btn,
+.subscription__btn:focus,
+.subscription__item--active .subscription__btn {
+  box-shadow: none;
+  background-color: transparent;
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $bg-white;
+}
+
+#one-month:checked ~ .subscription__tabs-wrapper #slide1,
+#six-months:checked ~ .subscription__tabs-wrapper #slide2,
+#twelve-months:checked ~ .subscription__tabs-wrapper #slide3 {
+  display: flex;
+}
+
+#one-month:checked ~ .subscription__tabs-wrapper label[for="one-month"],
+#six-months:checked ~ .subscription__tabs-wrapper label[for="six-months"],
+#twelve-months:checked ~ .subscription__tabs-wrapper label[for="twelve-months"] {
+  color: $blue-zodiac;
+}
+
+#one-month:checked ~ .subscription__tabs-wrapper label[for="one-month"]::before,
+#six-months:checked ~ .subscription__tabs-wrapper label[for="six-months"]::before,
+#twelve-months:checked ~ .subscription__tabs-wrapper label[for="twelve-months"]::before {
+  transform: scale(1);
+}
+
+@media (max-width: $tablet-width) {
+  .subscription__container {
+    padding-top: 99px;
+    padding-bottom: 80px;
+  }
+
+  .subscription::before {
+    right: -95px;
+    bottom: -125px;
+    width: 440px;
+    height: 440px;
+    background-image: url("../img/barbell-lap@1x.png");
+
+    @media(min-resolution: 1.5dppx),
+          (min-resolution: 144dpi) {
+      background-image: url("../img/barbell-lap@2x.png");
+    }
+  }
+
+  .subscription__list {
+    flex-direction: column;
+  }
+
+  .subscription__item {
+    width: 442px;
+    margin: 0 auto;
+    margin-bottom: 39px;
+
+    &:nth-child(3n) {
+      margin: 0 auto;
+    }
+  }
+
+  .subscription h2 {
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .subscription__controls {
+    width: 332px;
+    margin-bottom: 39px;
+
+    &::before {
+      top: 38px;
+    }
+  }
+
+  .subscription__controls label {
+    font-size: 18px;
+
+    &::before {
+      top: 38px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .subscription::before {
+    display: none;
+  }
+
+  .subscription__container {
+    padding-top: 69px;
+    padding-bottom: 48px;
+  }
+
+  .subscription h2 {
+    margin-bottom: 22px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .subscription__controls {
+    width: 289px;
+    margin-bottom: 30px;
+
+    &::before {
+      top: 36px;
+    }
+  }
+
+  .subscription__controls label {
+    font-size: 16px;
+
+    &::before {
+      top: 36px;
+    }
+  }
+
+  .subscription__item {
+    padding-top: 43px;
+    padding-bottom: 48px;
+    width: 290px;
+    margin-bottom: 35px;
+
+    &:nth-child(3n) {
+      margin: 0 auto;
+    }
+  }
+
+  .subscription__item h3 {
+    margin-bottom: 9px;
+    font-size: 22px;
+    line-height: 110.16%;
+  }
+
+  .subscription__item p {
+    margin-bottom: 54px;
+  }
+
+  .subscription__item b {
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+}

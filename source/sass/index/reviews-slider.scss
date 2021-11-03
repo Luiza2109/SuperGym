@@ -1,0 +1,135 @@
+.reviews__wrapper {
+  position: relative;
+}
+
+.reviews__btn-wrapper {
+  position: relative;
+  width: 560px;
+  margin: 0 auto;
+}
+
+.reviews-slider__btn::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  background-image: url("../img/arrow-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.reviews-slider__button--prev {
+  left: -11.1%;
+}
+
+.reviews-slider__button--next {
+  right: -11.1%;
+  transform: rotate(180deg);
+}
+
+.reviews-slider__list {
+  @include same-list;
+}
+
+.reviews-slider__item {
+  display: flex;
+  padding-top: 53px;
+  padding-bottom: 53px;
+  min-height: 136px;
+  background-color: $biscay;
+  color: $bg-white;
+  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+}
+
+.reviews-slider__wrapper-img {
+  width: 80px;
+  height: 80px;
+  margin-left: 62px;
+  margin-top: 9px;
+}
+
+.reviews-slider__text {
+  padding-left: 28px;
+  width: 59%;
+}
+
+.reviews-slider__item h3 {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.reviews-slider__item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.reviews-slider__item img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: $tablet-width) {
+  .reviews-slider__wrapper-img {
+    margin-left: 65px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .reviews__btn-wrapper {
+    width: 226px;
+  }
+
+  .reviews-slider__item {
+    display: block;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    min-height: 273px;
+  }
+
+  .reviews-slider__wrapper-img {
+    flex-shrink: 0;
+    margin-left: 41px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .reviews-slider__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    padding: 0;
+    margin-top: -60px;
+  }
+
+  .reviews-slider__text h3 {
+    width: 62px;
+    margin: 0;
+    margin-bottom: 23px;
+    margin-right: 40px;
+    line-height: 130%;
+  }
+
+  .reviews-slider__text p {
+    width: 176px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .reviews-slider__btn::after {
+    width: 10px;
+    height: 19px;
+  }
+
+  .reviews-slider__button--prev {
+    left: -18%;
+  }
+
+  .reviews-slider__button--next {
+    right: -18%;
+    transform: rotate(180deg);
+  }
+}

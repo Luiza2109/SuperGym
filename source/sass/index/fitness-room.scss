@@ -1,0 +1,217 @@
+.fitness-room__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 234px;
+}
+
+.fitness-room__text {
+  padding-top: 47px;
+  width: 30.5%;
+  min-width: 325px;
+  margin-left: 5.2%;
+}
+
+.fitness-room__text h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $blue-zodiac;
+  text-transform: uppercase;
+}
+
+.fitness-room__text b,
+.fitness-room__text p {
+  line-height: 150%;
+  color: $blue-zodiac;
+}
+
+.fitness-room__text b {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.fitness-room__text p {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.fitness-room__visual {
+  position: relative;
+  width: 56.8%;
+  height: 401px;
+  background-color: #d3d3df;
+}
+
+.fitness-room__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fitness-room__video {
+  position: absolute;
+  top: 288px;
+  left: -9.7%;
+  width: 364px;
+  height: 228px;
+}
+
+.fitness-room__video video {
+  width: 100%;
+  height: 100%;
+}
+
+.fitness-room__video button {
+  @include btn-reset;
+}
+
+
+.fitness-room__video--disabled div {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 54, 122, 0.5);
+}
+
+.fitness-room__video--disabled button {
+  @include btn-reset;
+  position: absolute;
+  z-index: 10;
+  width: 72px;
+  height: 72px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-color: $red-ribbona;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/btn-fitness-room.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media(min-resolution: 1.5dppx),
+          (min-resolution: 144dpi) {
+      background-image: url("../img/btn-fitness-room@2x.png");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .fitness-room__container {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 182px;
+  }
+
+  .fitness-room__text {
+    padding-top: 0;
+    width: 80%;
+    min-width: auto;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .fitness-room__text--hidden {
+    display: none;
+  }
+
+  .fitness-room__text h2 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .fitness-room__text b {
+    margin-bottom: 36px;
+  }
+
+  .fitness-room__visual {
+    margin: 0 auto;
+    width: 678px;
+    height: 345px;
+  }
+
+  .fitness-room__video {
+    top: 260px;
+    left: 50%;
+    width: 266px;
+    height: 167px;
+    transform: translateX(-50%);
+  }
+
+  .fitness-room__video--disabled button {
+    width: 52px;
+    height: 52px;
+
+    &::before {
+      width: 73px;
+      height: 73px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .fitness-room__container {
+    padding: 0;
+    padding-top: 69px;
+    padding-bottom: 276px;
+  }
+
+  .fitness-room__text {
+    padding: 0 4.8%;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  .fitness-room__text h2 {
+    margin-bottom: 6px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .fitness-room__text b {
+    margin-bottom: 25px;
+  }
+
+  .fitness-room__text p {
+    width: 89%;
+  }
+
+  .fitness-room__visual {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 313px;
+  }
+
+  .fitness-room__video {
+    top: 352px;
+    left: 50%;
+    width: 320px;
+    height: 167px;
+    transform: translateX(-50%);
+  }
+}

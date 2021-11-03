@@ -1,0 +1,9 @@
+.information-user {
+  display: flex;
+}
+
+@media (max-width: $tablet-width) {
+  .information-user {
+    flex-direction: column;
+  }
+}

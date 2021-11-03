@@ -1,0 +1,148 @@
+.feedback {
+  width: 50%;
+  min-height: 337px;
+  padding: 60px 103px 30px 103px;
+  background-color: $blue-zodiac;
+  color: $bg-white;
+}
+
+.feedback h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feedback__wrapper {
+  width: 480px;
+  margin-left: auto;
+}
+
+.feedback-form {
+  width: 410px;
+}
+
+.feedback-form p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.feedback-form__btn {
+  width: 100%;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="tel"] {
+  width: 190px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border: none;
+  color: $bg-white;
+  background-color: $blue-zodiac;
+  border-bottom: 1px solid #74819C;
+
+  &:focus {
+    outline: none;
+    border-color: $bg-white;
+  }
+}
+
+.feedback-form input[type=text] {
+  margin-right: 26px;
+}
+
+.feedback-form input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: $bg-white;
+}
+
+.feedback-form input::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: $bg-white;
+}
+
+.feedback-form__btn {
+  padding: 17px 54px;
+  cursor: pointer;
+  background-color: $blue-zodiac;
+  letter-spacing: 1.6px;
+  color: $bg-white;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    width: 100%;
+    min-height: 324px;
+    padding: 70px 103px 30px 133px;
+  }
+
+  .feedback__wrapper {
+    margin: 0 auto;
+  }
+
+  .feedback h2 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .feedback-form {
+    width: 475px;
+  }
+
+  .feedback-form input[type="text"],
+  .feedback-form input[type="tel"] {
+    width: 206px;
+  }
+
+  .feedback-form input[type=text] {
+    margin-right: 56px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    padding: 70px 4.8% 68px 4.8%;
+  }
+
+  .feedback__wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .feedback h2 {
+    margin-bottom: 34px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .feedback-form {
+    width: 100%;
+  }
+
+  .feedback-form p {
+    margin-bottom: 8px;
+  }
+
+  .feedback-form input[type="text"],
+  .feedback-form input[type="tel"] {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .feedback-form input[type=text] {
+    margin-right: 0;
+  }
+}
