@@ -30,3 +30,34 @@
     margin-left: 20px;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .social-footer {
+    align-items: center;
+    width: 145px;
+  }
+
+  .social-footer__item--vk svg {
+    width: 32px;
+    height: 18px;
+  }
+
+  .social-footer__item--insta svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .social-footer__item--fb svg {
+    width: 14px;
+    height: 27px;
+  }
+
+  .social-footer__item {
+    margin-left: 0;
+    margin-right: 35px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

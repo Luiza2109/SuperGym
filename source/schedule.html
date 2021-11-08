@@ -14,65 +14,149 @@
 </head>
 <body>
   <div class="wrapper">
-    <main>
-      <table>
-        <caption>Расписание</caption>
-        <thead>
-          <tr>
-            <td></td>
-            <td>Понедельник</td>
-            <td>Вторник</td>
-            <td>Среда</td>
-            <td>Четверг</td>
-            <td>Пятница</td>
-            <td>Суббота</td>
-            <td>Воскресенье</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>08:00</td>
-            <td>CrossFit</td>
-            <td>Aerostretching</td>
-            <td>Hot Iron</td>
-            <td>Pilates</td>
-            <td>Stretching</td>
-            <td>Functional</td>
-            <td>Body Sculpt</td>
-          </tr>
-          <tr>
-            <td>12:00</td>
-            <td>Body Sculpt</td>
-            <td>CrossFit</td>
-            <td>Aerostretching</td>
-            <td>Hot Iron</td>
-            <td>Pilates</td>
-            <td>Stretching</td>
-            <td>Functional</td>
-          </tr>
-          <tr>
-            <td>18:00</td>
-            <td>Functional</td>
-            <td>Body Sculpt</td>
-            <td>CrossFit</td>
-            <td>Aerostretching</td>
-            <td>Hot Iron</td>
-            <td>Pilates</td>
-            <td>Stretching</td>
-          </tr>
-          <tr>
-            <td>20:00</td>
-            <td>Stretching</td>
-            <td>Functional</td>
-            <td>Body Sculpt</td>
-            <td>CrossFit</td>
-            <td>Aerostretching</td>
-            <td>Hot Iron</td>
-            <td>Pilates</td>
-          </tr>
-        </tbody>
-      </table>
+    <main class="schedule-main">
+      <div class="schedule-main__container container">
+        <h1>Расписание</h1>
+        <div class="schedule" data-simplebar>
+          <div class="schedule__wrapper">
+            <div class="schedule__weekdays-wrapper schedule__weekdays--closed">
+              <button class="schedule__btn" type="button" aria-label="кнопка отктрытия и закрытия меню"></button>
+              <ul class="schedule__weekdays">
+                <li class="schedule__weekday schedule__weekday--active" data-weekday="monday">
+                  <p>Понедельник</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="tuesday">
+                  <p>Вторник</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="wednesday">
+                  <p>Среда</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="thursday">
+                  <p>Четверг</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="friday">
+                  <p>Пятница</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="saturday">
+                  <p>Суббота</p>
+                </li>
+                <li class="schedule__weekday" data-weekday="sunday">
+                  <p>Воскресенье</p>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="schedule__lessons">
+              <li class="schedule__time schedule__time--decor" data-time="08:00">
+                <p>08:00</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="monday">
+                <p>CrossFit</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="tuesday">
+                <p>Aerostretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="wednesday">
+                <p>Hot Iron</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="thursday">
+                <p>Pilates</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="friday">
+                <p>Stretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="saturday">
+                <p>Functional</p>
+              </li>
+              <li class="schedule__lesson" data-time="08:00" data-weekday="sunday">
+                <p>Body Sculpt</p>
+              </li>
+            </ul>
+            <ul class="schedule__lessons">
+              <li class="schedule__time" data-time="12:00">
+                <p>12:00</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="monday">
+                <p>Body Sculpt</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="tuesday">
+                <p>CrossFit</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="wednesday">
+                <p>Aerostretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="thursday">
+                <p>Hot Iron</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="friday">
+                <p>Pilates</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="saturday">
+                <p>Stretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="12:00" data-weekday="sunday">
+                <p>Functional</p>
+              </li>
+            </ul>
+            <ul class="schedule__lessons">
+              <li class="schedule__time" data-time="18:00">
+                <p>18:00</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="monday">
+                <p>Functional</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="tuesday">
+                <p>Body Sculpt</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="wednesday">
+                <p>CrossFit</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="thursday">
+                <p>Aerostretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="friday">
+                <p>Hot Iron</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="saturday">
+                <p>Pilates</p>
+              </li>
+              <li class="schedule__lesson" data-time="18:00" data-weekday="sunday">
+                <p>Stretching</p>
+              </li>
+            </ul>
+            <ul class="schedule__lessons">
+              <li class="schedule__time" data-time="20:00">
+                <p>20:00</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="monday">
+                <p>Stretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="tuesday">
+                <p>Functional</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="wednesday">
+                <p>Body Sculpt</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="thursday">
+                <p>CrossFit</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="friday">
+                <p>Aerostretching</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="saturday">
+                <p>Hot Iron</p>
+              </li>
+              <li class="schedule__lesson" data-time="20:00" data-weekday="sunday">
+                <p>Pilates</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

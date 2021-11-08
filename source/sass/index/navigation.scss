@@ -23,6 +23,15 @@
   line-height: 16px;
   color: $bg-white;
   text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .navigation__logo {
@@ -48,6 +57,7 @@
 
   .navigation__list {
     margin: 0;
+    margin-bottom: 26px;
     display: block;
     column-count: 2;
     column-gap: 138px;

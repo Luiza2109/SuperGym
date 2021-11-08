@@ -1,0 +1,47 @@
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
+.simplebar-track.simplebar-vertical {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .simplebar-track.simplebar-horizontal {
+    display: block;
+    left: 70px;
+    bottom: 0px;
+    height: 4px;
+    background-color: #feebef;
+  }
+
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    top: 0;
+    height: 4px;
+    background-color: #feebef;
+  }
+
+  .simplebar-scrollbar::before {
+    border-radius: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    width: 305px;
+    background-color: #ed0233;
+  }
+
+  .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .simplebar-track.simplebar-horizontal {
+    display: none;
+  }
+
+  .simplebar-track.simplebar-vertical {
+    display: none;
+  }
+}

@@ -1,0 +1,219 @@
+.schedule__btn {
+  display: none;
+}
+
+.schedule__weekdays,
+.schedule__lessons {
+  @include same-list;
+  display: flex;
+}
+
+.schedule__weekdays {
+  margin-bottom: 8px;
+}
+
+.schedule p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+  color: $blue-zodiac;
+  text-align: center;
+  pointer-events: none;
+}
+
+.schedule__weekdays {
+  margin-left: 72px;
+}
+
+.schedule__weekday {
+  padding: 18px 1% 18px 1%;
+  min-width: 13.6%;
+  border: 2px solid $biscay;
+  background-color: $bg-white;
+}
+
+.schedule__weekday:not(:last-child) {
+  margin-right: 8px;
+}
+
+.schedule__time {
+  flex-shrink: 0;
+  width: 65px;
+  padding: 39px 0.5% 40px 0.5%;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border: 2px solid $biscay;
+  background-color: $bg-white;
+}
+
+.schedule__lesson {
+  padding: 41px 0.5% 42px 0.5%;
+  min-width: 12.75%;
+  margin-bottom: 8px;
+  background-color: $white-lilac;
+  cursor: pointer;
+}
+
+.schedule__lesson:not(:last-child) {
+  margin-right: 8px;
+}
+
+.schedule--active {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px $red-ribbona inset;
+}
+
+.schedule--active p {
+  color: $red-ribbona;
+}
+
+.schedule--click {
+  box-shadow: 0px 0px 0px 2px $biscay inset;
+}
+
+.schedule--click p {
+  color: $blue-zodiac;
+}
+
+.schedule--weekday-time {
+  background-color: $red-ribbona;
+  border-color: transparent;
+}
+
+.schedule--weekday-time p {
+  color: $bg-white;
+}
+
+@media (max-width: $tablet-width) {
+  .schedule {
+    width: 678px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .schedule__wrapper {
+    width: 1137px;
+  }
+
+  .schedule__weekdays {
+    margin-left: 70px;
+  }
+
+  .schedule__time {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 62px;
+    padding: 37px 0.5% 38px 0.5%;
+  }
+
+  .schedule__time--decor::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -2px;
+    width: 62px;
+    height: 70px;
+
+    background-color: #ffffff;
+  }
+
+  .schedule__lesson {
+    padding: 40px 0.5% 41px 0.5%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .schedule {
+    width: 290px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .schedule__wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .schedule p {
+    font-size: 16px;
+  }
+
+  .schedule__weekdays .schedule--weekday-time {
+    position: relative;
+    top: -2px;
+    width: 171px;
+    padding-top: 18px;
+  }
+
+  .schedule__weekdays-wrapper {
+    position: relative;
+    display: block;
+    width: 222px;
+    height: 60px;
+    margin-left: 68px;
+    margin-bottom: 8px;
+    border: 2px solid $biscay;
+  }
+
+  .schedule__weekdays {
+    display: block;
+    margin: 0;
+    margin-left: -2px;
+  }
+
+  .schedule__weekday {
+    width: 173px;
+    padding: 16px 1% 16px 1%;
+    border-top: none;
+    cursor: pointer;
+  }
+
+  .schedule__weekdays--closed .schedule__weekday {
+    display: none;
+  }
+
+  .schedule__weekdays--closed .schedule__weekday--active {
+    display: block;
+    padding-left: 13px;
+  }
+
+  .schedule__btn {
+    @include btn-reset;
+    display: block;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 51px;
+    height: 60px;
+    border: 2px solid $biscay;
+    cursor: pointer;
+    background-image: url("../img/schedule-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px 12px;
+  }
+
+  .schedule__weekday:not(:last-child) {
+    margin: 0;
+  }
+
+  .schedule__time {
+    position: static;
+    padding: 26px 0.5% 26px 0.5%;
+  }
+
+  .schedule__lesson {
+    display: none;
+    width: 100%;
+    padding: 27px 0.5% 27px 0.5%;
+  }
+
+  .schedule__time--decor::before {
+    display: none;
+  }
+
+  .schedule__lesson[data-weekday="monday"] {
+    display: block;
+  }
+}

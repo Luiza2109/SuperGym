@@ -1,3 +1,8 @@
+.trainers__wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .trainers__container h2 {
   margin: 0;
   margin-bottom: 52px;
@@ -9,7 +14,43 @@
   letter-spacing: 0.03em;
 }
 
+.trainers__button::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  background-image: url("../img/arrow-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.trainers__button--prev {
+  left: -5.1%;
+}
+
+.trainers__button--next {
+  right: -5.1%;
+  transform: rotate(180deg);
+}
+
 @media (max-width: $tablet-width) {
+  .trainers__wrapper {
+    width: 566px;
+    margin: 0 auto;
+  }
+
+  .trainers__button {
+    top: 50%;
+  }
+
+  .trainers__button--prev {
+    left: -11%;
+  }
+
+  .trainers__button--next {
+    right: -11%;
+  }
+
   .trainers__container h2 {
     margin-bottom: 41px;
     font-size: 42px;
@@ -19,6 +60,23 @@
 }
 
 @media (max-width: $mobile-width) {
+  .trainers__wrapper {
+    width: 226px;
+  }
+
+  .trainers__button::after {
+    width: 17px;
+    height: 20px;
+  }
+
+  .trainers__button--prev {
+    left: -16%;
+  }
+
+  .trainers__button--next {
+    right: -16%;
+  }
+
   .trainers__container h2 {
     margin-bottom: 44px;
     font-size: 32px;
