@@ -13,11 +13,11 @@
   transition: all 0.3s ease;
 }
 
-.social-footer__item a:hover svg {
+.social-footer__item:hover svg {
   fill: rgba(255, 255, 255, 0.5);
 }
 
-.social-footer__item a:active svg {
+.social-footer__item:active svg {
   fill: rgba(255, 255, 255, 0.3);
 }
 

@@ -67,19 +67,27 @@
 .fitness-room__video video {
   width: 100%;
   height: 100%;
+  background-image: url("../img/fitness-video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media(min-resolution: 1.5dppx),
+        (min-resolution: 144dpi) {
+    background-image: url("../img/fitness-video-mobile@2x.jpg");
+  }
 }
 
 .fitness-room__video button {
   @include btn-reset;
 }
 
-
 .fitness-room__video--disabled div {
   position: absolute;
   z-index: 10;
   width: 100%;
   height: 100%;
-  background: rgba(20, 54, 122, 0.5);
+  background-color: rgba(20, 54, 122, 0.5);
 }
 
 .fitness-room__video--disabled button {
@@ -160,6 +168,15 @@
     transform: translateX(-50%);
   }
 
+  .fitness-room__video video {
+    background-image: url("../img/fitness-video-lap@1x.jpg");
+
+    @media(min-resolution: 1.5dppx),
+          (min-resolution: 144dpi) {
+      background-image: url("../img/fitness-video-lap@2x.jpg");
+    }
+  }
+
   .fitness-room__video--disabled button {
     width: 52px;
     height: 52px;
@@ -210,8 +227,19 @@
   .fitness-room__video {
     top: 352px;
     left: 50%;
-    width: 320px;
+    width: 100%;
     height: 167px;
     transform: translateX(-50%);
+  }
+
+  .fitness-room__video video {
+    width: 100%;
+
+    background-image: url("../img/fitness-video-desctop@1x.jpg");
+
+    @media(min-resolution: 1.5dppx),
+          (min-resolution: 144dpi) {
+      background-image: url("../img/fitness-video-desctop@2x.jpg");
+    }
   }
 }

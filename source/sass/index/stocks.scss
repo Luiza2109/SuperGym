@@ -122,12 +122,13 @@
   min-height: 211px;
   padding: 26px 3% 29px 5.1%;
   border: 7px solid transparent;
-  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-color: #d10a42;
+  border-image: linear-gradient(to right bottom,#d10a43 0%,#02359e 100%);
   border-image-slice: 1;
-}
 
-.stocks__item:not(:last-child) {
-  margin-bottom: 40px;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 .stocks__item h3 {
@@ -139,6 +140,7 @@
 
 .stocks__item p {
   margin: 0;
+  margin-bottom: 15px;
   font-size: 16px;
   line-height: 140%;
 }

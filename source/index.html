@@ -5,11 +5,12 @@
   <title>Фитнес-центр SuperGym</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <link rel="preload" href="fonts/BebasNeueBold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/BebasNeueRegular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Robotocondensed.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Robotocondensedbold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Robotocondensedlight.woff2" as="font" crossorigin="anonymous">
+  <meta name="description" content="Фитнес-центр SuperGym в Омске">
+  <link rel="preload" href="fonts/bebasneuebold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebasneuebold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensedlight.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -65,27 +66,27 @@
                 <li>Кардио-зона</li>
               </ul>
             </div>
-            <a href="#" class="main-screen__btn button">Купить абонемент</a>
+            <a href="#subscription" class="main-screen__btn button">Купить абонемент</a>
           </div>
           <ul class="main-screen__social social">
             <li class="social__item">
               <a href="#" aria-label="Фейсбук" target="_blank" rel="noopener">
                 <svg width="12" height="9" fill="#ffffff">
-                  <use xlink:href="#icon-fb"></use>
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" aria-label="Вконтакте" target="_blank" rel="noopener">
                 <svg width="14" height="9" fill="#ffffff">
-                  <use xlink:href="#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" aria-label="IG" target="_blank" rel="noopener">
                 <svg width="10" height="10" fill="#ffffff">
-                  <use xlink:href="#icon-ig"></use>
+                  <use xlink:href="img/sprite.svg#icon-ig"></use>
                 </svg>
               </a>
             </li>
@@ -111,13 +112,13 @@
             </picture>
             <div class="fitness-room__video">
               <div></div>
-              <video src="#" controls="controls" poster="img/fitness-video-desctop@1x.jpg"></video>
+              <video src="#" controls="controls"></video>
               <button type="button" class="fitness-room__video-btn" aria-label="Кнопка просмотра видео"></button>
             </div>
           </div>
         </div>
       </section>
-      <section class="page-main__subscription subscription">
+      <section id="subscription" class="page-main__subscription subscription">
         <div class="subscription__container container">
           <h2>Абонементы</h2>
           <input class="visually-hidden" type="radio" id="one-month" name="toggle" checked>
@@ -133,19 +134,19 @@
               <li class="subscription__item">
                 <h3>С тренером</h3>
                 <p>12 занятий</p>
-                <b data-value="5000">5000 <span>&#8381;</span></b>
+                <b data-value="5000">5000 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item subscription__item--active">
                 <h3>Дневной</h3>
                 <p>с 8:00 до 17:00</p>
-                <b data-value="1700">1700 &#8381;</b>
+                <b data-value="1700">1700 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item">
                 <h3>Полный день</h3>
                 <p>с 8:00 до 22:00</p>
-                <b data-value="2700">2700 <span>&#8381;</span></b>
+                <b data-value="2700">2700 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
             </ul>
@@ -153,19 +154,19 @@
               <li class="subscription__item">
                 <h3>С тренером</h3>
                 <p>12 занятий</p>
-                <b data-value="7000">7000 <span>&#8381;</span></b>
+                <b data-value="7000">7000 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item subscription__item--active">
                 <h3>Дневной</h3>
                 <p>с 8:00 до 17:00</p>
-                <b data-value="1900">1900 <span>&#8381;</span></b>
+                <b data-value="1900">1900 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item">
                 <h3>Полный день</h3>
                 <p>с 8:00 до 22:00</p>
-                <b data-value="4700">4700 <span>&#8381;</span></b>
+                <b data-value="4700">4700 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
             </ul>
@@ -173,19 +174,19 @@
               <li class="subscription__item">
                 <h3>С тренером</h3>
                 <p>12 занятий</p>
-                <b data-value="9300">9300 <span>&#8381;</span></b>
+                <b data-value="9300">9300 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item subscription__item--active">
                 <h3>Дневной</h3>
                 <p>с 8:00 до 17:00</p>
-                <b data-value="2100">2100 <span>&#8381;</span></b>
+                <b data-value="2100">2100 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
               <li class="subscription__item">
                 <h3>Полный день</h3>
                 <p>с 8:00 до 22:00</p>
-                <b data-value="6700">6700 <span>&#8381;</span></b>
+                <b data-value="6700">6700 <span>₽</span></b>
                 <a href="#" class="subscription__btn button">Купить абонемент</a>
               </li>
             </ul>
@@ -457,10 +458,10 @@
                   <li class="reviews-slider__item swiper-slide">
                     <div class="reviews-slider__wrapper-img">
                       <picture>
-                        <source type="image/webp" srcset="img/reviews-orlova@1px.webp, img/reviews-orlova@2px.webp 2x">
+                        <source type="image/webp" srcset="img/reviews-orlova-new@1px.webp, img/reviews-orlova-new@2px.webp 2x">
 
                         <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/reviews-orlova@1px.jpg" srcset="img/reviews-orlova@2px.jpg 2x" alt="Тренер Анна Павлова" width="80" height="80">
+                        <img src="img/reviews-orlova-new@1px.png" srcset="img/reviews-orlova-new@2px.png 2x" alt="Тренер Анна Павлова" width="80" height="80">
                       </picture>
                     </div>
                     <div class="reviews-slider__text">
@@ -471,10 +472,10 @@
                   <li class="reviews-slider__item swiper-slide">
                     <div class="reviews-slider__wrapper-img">
                       <picture>
-                        <source type="image/webp" srcset="img/reviews-orlova@1px.webp, img/reviews-orlova@2px.webp 2x">
+                        <source type="image/webp" srcset="img/reviews-orlova-new@1px.webp, img/reviews-orlova-new@2px.webp 2x">
 
                         <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/reviews-orlova@1px.jpg" srcset="img/reviews-orlova@2px.jpg 2x" alt="Тренер Анна Павлова" width="80" height="80">
+                        <img src="img/reviews-orlova-new@1px.png" srcset="img/reviews-orlova-new@2px.png 2x" alt="Тренер Анна Павлова" width="80" height="80">
                       </picture>
                     </div>
                     <div class="reviews-slider__text">
@@ -485,10 +486,10 @@
                   <li class="reviews-slider__item swiper-slide">
                     <div class="reviews-slider__wrapper-img">
                       <picture>
-                        <source type="image/webp" srcset="img/reviews-orlova@1px.webp, img/reviews-orlova@2px.webp 2x">
+                        <source type="image/webp" srcset="img/reviews-orlova-new@1px.webp, img/reviews-orlova-new@2px.webp 2x">
 
                         <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/reviews-orlova@1px.jpg" srcset="img/reviews-orlova@2px.jpg 2x" alt="Тренер Анна Павлова" width="80" height="80">
+                        <img src="img/reviews-orlova-new@1px.png" srcset="img/reviews-orlova-new@2px.png 2x" alt="Тренер Анна Павлова" width="80" height="80">
                       </picture>
                     </div>
                     <div class="reviews-slider__text">
@@ -510,8 +511,10 @@
             <h2>Бесплатное занятие</h2>
             <form class="feedback-form" action="#" method="POST">
               <p>
-                <input type="text" name="name" placeholder="Имя">
-                <input type="tel" name="tel" data-tel-input="" placeholder="Телефон" required>
+                <label class="visually-hidden" for="name" aria-label="Введите Ваше имя"></label>
+                <input type="text" name="name" id="name" placeholder="Имя" required>
+                <label class="visually-hidden" for="tel" aria-label="Введите Ваш теле"></label>
+                <input type="tel" name="tel" id="tel" data-tel-input="" placeholder="Телефон" required>
               </p>
               <button class="feedback-form__btn button" type="submit">Отправить</button>
             </form>
@@ -554,7 +557,7 @@
               <a href="#">Услуги</a>
             </li>
             <li class="navigation__item">
-              <a href="#">Абонементы</a>
+              <a href="#subscription">Абонементы</a>
             </li>
             <li class="navigation__item">
               <a href="#">Акции</a>
@@ -588,7 +591,7 @@
                 </svg>
               </a>
             </li>
-            </ul>
+          </ul>
         </nav>
       </div>
     </footer>

@@ -1,11 +1,10 @@
 .promo {
   display: flex;
-  align-items: flex-start;
   width: 100%;
 }
 
 .promo__container {
-  padding: 80px 0 80px 78px;
+  padding: 80px 0 74px 78px;
   width: 43%;
   min-width: 500px;
   min-height: 500px;
@@ -88,13 +87,14 @@
 
 .promo__visual {
   width: 57%;
-  height: 500px;
   background-color: $blue-zodiac;
   overflow: hidden;
 }
 
 .promo__visual img {
-  height: 500px;
+  height: 100%;
+  width: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -165,11 +165,7 @@
   .promo__visual {
     width: 100%;
     max-width: 660px;
-    height: 292px;
-  }
-
-  .promo__visual img {
-    height: 292px;
+    min-height: 292px;
   }
 }
 
@@ -187,5 +183,6 @@
   .promo__visual {
     width: 100%;
     max-width: 400px;
+    height: 292px;
   }
 }

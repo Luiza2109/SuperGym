@@ -28,8 +28,6 @@
     }
 })();
 
-"use strict";
-
 (function () {
   if (document.querySelector(".trainers-slider") !== null && document.querySelector(".reviews-slider") !== null) {
     const mySwiper = new Swiper(".trainers-slider", {
@@ -70,8 +68,6 @@
     });
   }
 })();
-
-"use strict";
 
 (function () {
   if (document.querySelector(".feedback-form") !== null) {
@@ -125,8 +121,6 @@
     });
   }
 })();
-
-"use strict";
 
 (function () {
   const phoneInputs = document.querySelectorAll("input[data-tel-input]");
@@ -202,8 +196,6 @@
     phoneInput.addEventListener("paste", onPhonePaste, false);
   }
 })();
-
-"use strict";
 
 (function () {
   if (document.querySelector(".schedule") !== null) {

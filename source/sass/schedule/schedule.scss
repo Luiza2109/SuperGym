@@ -194,6 +194,10 @@
     background-size: 21px 12px;
   }
 
+  .schedule__weekday--active .schedule__btn {
+    transform: rotate(180deg);
+  }
+
   .schedule__weekday:not(:last-child) {
     margin: 0;
   }
